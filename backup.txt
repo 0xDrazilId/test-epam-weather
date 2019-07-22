@@ -1,0 +1,47 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+<script type="text/javascript">
+//example data list
+var weatherList = [
+{
+    date: 1559419200000,
+    temperature: {
+      night: 16,
+      day: 26,
+    },
+    cloudiness: 'Ясно',
+    snow: false,
+    rain: false,
+  },
+  {
+    date: 1559505600000,
+    temperature: {
+      night: 19,
+      day: 29,
+    },
+    cloudiness: 'Облачно',
+    snow: false,
+    rain: true,
+  },
+  {
+    date: 1559592000000,
+    temperature: {
+      night: 12,
+      day: 21,
+    },
+    cloudiness: 'Облачно',
+    snow: false,
+    rain: false,
+  }]
+
+monthNames = [, 'Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+//alert(getMonthName(1))
+for (var i = 0; i < weatherList.length; i++) {
+	date = weatherList[i].date;
+	parseDate = date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear();
+	result = parseDate + "!"
+}
+</script>
+</head>
+</html>

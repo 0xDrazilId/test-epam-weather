@@ -1,0 +1,27 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src = "data.js"></script>
+<script type="text/javascript">
+monthNames = [, 'Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+//alert(getMonthName(1))
+function getResult(){
+for (var i = 0; i < weatherList.length; i++) {
+	var dateOfWeather = new Date(weatherList[i].date);
+	var parseDate = dateOfWeather.getDate() + " " + monthNames[dateOfWeather.getMonth()] + " " + dateOfWeather.getFullYear();
+	var isRainy = function() { return weatherList[i].rain ? "Дождь" : ""; }
+	var isSnow = function() { return weatherList[i].snow ? "Снег" : ""; }
+	document.write(parseDate + " " + weatherList[i].cloudiness + " Днём: " + weatherList[i].temperature.day + " Ночью: " + weatherList[i].temperature.night + " " + isSnow() + isRainy() +  "<br>" )
+}
+}
+
+</script>
+</head>
+
+<body>
+	<div id = "mainBlock">
+		<script type="text/javascript">getResult()</script>
+	</div>
+</body>
+</html>

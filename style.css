@@ -1,0 +1,10 @@
+#mainBlock {
+	margin: 50px;
+	padding: 5px;
+	width: 500px;
+	height: 500px;
+	background-color: #2f2f2f;
+	color: #9f9f9f;
+	font-family: Roboto;
+	word-wrap: break-word;
+}
