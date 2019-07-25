@@ -1,10 +1,120 @@
-#mainBlock {
+h2{  /*В h2 написана фраза "Прогноз погоды" */
+	font-size: 26px;
+	padding-top: 12px;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+	font-family: verdana;
+	font-style: normal;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+#mainBlock { /*Главный блок*/
 	margin: 50px;
+	width: 1000px;
+	height: 350px;
+	background-image: url("img/back.jpg");
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+#mainBlock > .weatherBlock{ /* Не уверен, нужно ли ставить знак ">" , но блок дня погоды должен быть дочерним от mainBlock*/
+	display: inline-block;
+	font-size: 10pt;
+	width: 19%;
+	height: 77%;
+	background: rgba(210,230,252, 0.7);
+	border-radius: 10px;
 	padding: 5px;
-	width: 500px;
-	height: 500px;
-	background-color: #2f2f2f;
-	color: #9f9f9f;
-	font-family: Roboto;
-	word-wrap: break-word;
+	margin: 4px;
+}
+
+.dayOfWeek{			/*Надпись дня недели*/
+	color: #4f4f4f;
+	font-family: calibri;
+	font-size:13pt;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.weatherBlock h1{  /*В h1 пишется дата*/
+	font-size: 22px;
+	text-align: center;
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+	font-family: sans-serif;
+	margin: 3px;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+	display: block;
+    margin: 0 auto; 
+}
+
+.dayTemperature{   /* в этом блоке пишется температура днём */
+	color: #4f4f4f;
+	font-family: calibri;
+	font-size:16pt;
+	font-weight: bold;
+	text-align: center;
+	padding: 1px;
+}
+
+.nightTemperature{ /* в этом блоке пишется температура ночью */
+	color: #4f4f4f;
+	font-family: calibri;
+	font-size:14pt;
+	font-style: normal; 
+	text-align: center;
+	padding: 1px;
+}
+
+.precipitations{ /* в этом блоке пишутся осадки */
+	color: #4f4f4f;
+	font-family: helvetica;
+	font-size: 11pt;
+	text-align: center;
+}
+
+#prev{	/* Кнопка "Назад" является классом, а не id, потому что одна на всю страницу */
+	cursor: pointer;
+	display: inline-block;
+	background-image: url(img/prev_arrow.png);
+	background-size: cover;
+	width: 65px;
+	height: 65px;
+	margin-top:10%;
+	position: absolute;
+	left: 2px;
+}
+
+#prev:hover {  /*Применится при наведении на кнопку "Назад" */
+	margin-top: 11%;
+	width: 55px;
+	height:55px; 
+}
+
+#next{ /* Кнопка "Вперед" является классом, а не id, потому что одна на всю страницу */
+	cursor: pointer;
+	display: inline-block;
+	background-image: url(img/next_arrow.png);
+	background-size: cover;
+	width: 65px;
+	height: 65px;
+	margin-top:10%;
+	position: absolute;
+	right: 2px;
+}
+
+#next:hover { /*Применится при наведении на кнопку "Вперёд" */
+	margin-top: 11%;
+	width: 55px;
+	height:55px; 
 }
